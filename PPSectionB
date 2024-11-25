@@ -18,7 +18,7 @@ while Found == False:
     Found = True
     break
 """
-"""
+
 userInput = input("enter a string")
 vowels = ["a", "e", "i", "o", "u"]
 userVowels = []
@@ -33,13 +33,14 @@ reverseVowels = userVowels[::-1]
 for i in range(len(listInput)):
   if listInput[i] in vowels:
     listInput[i] = reverseVowels[i]
+
+
 """
-
-
+#June 2019 Section B - WORKING
 userInput = input("enter a string")
 userInput2 = input("enter another string")
 userList1 = []
-Valid = False
+Valid = True
 userList2 = []
 sameLetters = []
 for i in userInput:
@@ -50,9 +51,10 @@ for i in range(len(userList1)):
   if userList1[i] in userList2:
     sameLetters.append(userList1[i])
 for i in range(len(sameLetters)):
-  if userList1[i] in sameLetters:
-    Valid = True
-  else:
-    print("The first word cannot be created using only letters from the second word")
+  if userList1[i] not in sameLetters:
+    Valid = False
 if Valid:
   print("The first word can be created using only letters from the second word")
+else:
+  print("The first word cannot be created using only letters from the second word")
+"""
