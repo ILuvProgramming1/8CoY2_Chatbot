@@ -21,18 +21,20 @@ while Found == False:
 
 userInput = input("enter a string")
 vowels = ["a", "e", "i", "o", "u"]
+vowelCount = 0
 userVowels = []
 reverseVowels = []
 listInput = []
-for i in userInput:
-  listInput.append(i)
-for i in listInput:
-  if i in vowels:
-    userVowels.append(i)
+for letter in userInput:
+  listInput.append(letter)
+for letter in listInput:
+  if letter in vowels:
+    userVowels.append(letter)
 reverseVowels = userVowels[::-1]
 for i in range(len(listInput)):
   if listInput[i] in vowels:
-    listInput[i] = reverseVowels[i]
+    listInput[i] = reverseVowels[vowelCount]
+    vowelCount += 1
 print(listInput)
 
 """
