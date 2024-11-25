@@ -20,6 +20,7 @@ while Found == False:
 """
 
 userInput = input("enter a string: ")
+print(userInput)
 vowels = ["a", "e", "i", "o", "u"]
 vowelCount = 0
 userVowels = []
