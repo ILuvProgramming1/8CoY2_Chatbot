@@ -32,7 +32,7 @@ for i in listInput:
 reverseVowels = userVowels[::-1]
 for i in range(len(listInput)):
   if listInput[i] in vowels:
-    listInput[i] = reverseVowels[i]
+    listInput[i] = 
 
 
 """
