@@ -33,6 +33,7 @@ reverseVowels = userVowels[::-1]
 for i in range(len(listInput)):
   if listInput[i] in vowels:
     listInput[i] = reverseVowels[i]
+print(listInput)
 
 """
 #June 2019 Section B - WORKING
