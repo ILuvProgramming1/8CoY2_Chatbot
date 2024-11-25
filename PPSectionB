@@ -35,7 +35,8 @@ for i in range(len(listInput)):
   if listInput[i] in vowels:
     listInput[i] = reverseVowels[vowelCount]
     vowelCount += 1
-print(listInput)
+afterTransformation = str(listInput)
+print(afterTransformation)
 
 """
 #June 2019 Section B - WORKING
