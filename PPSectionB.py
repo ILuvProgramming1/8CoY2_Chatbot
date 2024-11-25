@@ -1,4 +1,4 @@
-"""
+
 num = int(input("please input a number"))
 Found = False
 count = 1
@@ -17,8 +17,10 @@ while Found == False:
     print(listHarshad[num])
     Found = True
     break
-"""
 
+
+"""
+#June 2022 Section B - WORKING
 userInput = input("enter a string: ")
 print(userInput)
 vowels = ["a", "e", "i", "o", "u"]
@@ -38,6 +40,7 @@ for i in range(len(listInput)):
     vowelCount += 1
 afterTransformation = "".join(listInput)
 print(afterTransformation)
+"""
 
 """
 #June 2019 Section B - WORKING
