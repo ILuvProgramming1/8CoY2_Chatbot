@@ -19,7 +19,7 @@ while Found == False:
     break
 """
 
-userInput = input("enter a string")
+userInput = input("enter a string: ")
 vowels = ["a", "e", "i", "o", "u"]
 vowelCount = 0
 userVowels = []
@@ -35,7 +35,7 @@ for i in range(len(listInput)):
   if listInput[i] in vowels:
     listInput[i] = reverseVowels[vowelCount]
     vowelCount += 1
-afterTransformation = str(listInput)
+afterTransformation = "".join(listInput)
 print(afterTransformation)
 
 """
