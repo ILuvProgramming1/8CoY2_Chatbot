@@ -1,3 +1,4 @@
+mainString
 list1 = []
 list2 = []
 distance = 0
