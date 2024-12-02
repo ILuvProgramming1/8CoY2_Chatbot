@@ -1,4 +1,6 @@
-mainString
+
+string = ""
+mainList = 
 list1 = []
 list2 = []
 distance = 0
