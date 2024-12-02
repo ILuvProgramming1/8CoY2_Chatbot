@@ -2,7 +2,7 @@
 string = ""
 mainList = []
 for i in range(len(mainList)):
-    
+
 list1 = []
 list2 = []
 distance = 0
