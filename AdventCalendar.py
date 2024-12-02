@@ -1,9 +1,9 @@
 
 string = ""
-mainList = []
 for items in string:
-    
-
+    left, right = map(int, items.split())
+    list1.append(left)
+    list2.append(right)
 list1 = []
 list2 = []
 distance = 0
