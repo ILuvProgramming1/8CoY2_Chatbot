@@ -1,7 +1,7 @@
 
 string = "https://adventofcode.com/2024/day/1/input"
 for items in string:
-    left, right = map(int, items.split())
+    left, right = map(, items.split())
     list1.append(left)
     list2.append(right)
 list1 = []
