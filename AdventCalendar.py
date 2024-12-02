@@ -1,6 +1,9 @@
 
 string = ""
-mainList = 
+mainList = []
+for num in string:
+    mainList.append(num)
+    
 list1 = []
 list2 = []
 distance = 0
