@@ -1,7 +1,8 @@
 
 string = ""
 mainList = []
-for i in range(len(mainList)):
+for items in string:
+    
 
 list1 = []
 list2 = []
