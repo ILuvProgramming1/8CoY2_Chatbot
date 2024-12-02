@@ -1000,7 +1000,7 @@ string = "69214   60950
 52576   12845
 91921   51318"
 for items in string:
-    left, right = items.split()
+    left, right = int(items.split())
     list1.append(left)
     list2.append(right)
 list1 = []
