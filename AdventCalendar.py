@@ -3,7 +3,12 @@ string = ""
 mainList = []
 for num in string:
     mainList.append(num)
+for i in range(len(mainList)):
+    count += 1
+    while count <= 5:
+        list1.append(i)
     
+
 list1 = []
 list2 = []
 distance = 0
