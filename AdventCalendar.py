@@ -1005,7 +1005,6 @@ for items in string:
     list2.append(right)
 list1 = []
 list2 = []
-distance = 0
 sumDistance = 0
 for i in range(len(list1)-1):
     for j in range(len(list1)-i-1):
