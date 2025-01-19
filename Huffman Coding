@@ -1,0 +1,67 @@
+class Node:
+    """A class to represent a node in the Huffman tree."""
+    def __init__(self, char, freq):
+        self.char = char      # Character
+        self.freq = freq      # Frequency
+        self.left = None      # Left child
+        self.right = None     # Right child
+
+def build_huffman_tree(char_freq):
+    """Build the Huffman tree and return the root."""
+    nodes = [Node(char, freq) for char, freq in char_freq.items()]
+
+    while len(nodes) > 1:
+        # Sort nodes by frequency
+        nodes.sort(key=lambda x: x.freq)
+
+        # Merge the two nodes with the smallest frequency
+        left = nodes[0]
+        right = nodes[1]
+        merged = Node(None, left.freq + right.freq)
+        merged.left = left
+        merged.right = right
+
+        # Remove the two nodes and add the merged node
+        nodes = nodes[2:] + [merged]
+
+    return nodes[0]  # Return the root of the tree
+
+def generate_codes(node, prefix="", codes={}):
+    """Generate Huffman codes for each character."""
+    if node is not None:
+        if node.char is not None:  # If it's a leaf node
+            codes[node.char] = prefix
+        generate_codes(node.left, prefix + "0", codes)
+        generate_codes(node.right, prefix + "1", codes)
+    return codes
+
+def huffman_encoding(data):
+    """Perform Huffman encoding on the input data."""
+    # Calculate frequency of each character
+    char_freq = {}
+    for char in data:
+        if char in char_freq:
+            char_freq[char] += 1
+        else:
+            char_freq[char] = 1
+
+    # Build the Huffman tree
+    root = build_huffman_tree(char_freq)
+
+    # Generate codes
+    huffman_codes = generate_codes(root)
+
+    # Encode the data
+    encoded_data = ''.join(huffman_codes[char] for char in data)
+
+    return encoded_data, huffman_codes
+
+def main():
+    data = input("Enter the string to encode: ")
+    encoded_data, huffman_codes = huffman_encoding(data)
+
+    print("Encoded data:", encoded_data)
+    print("Huffman Codes:", huffman_codes)
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,31 @@
+def generate_key(length):
+    #generating a key 
+    key = ""
+    for i in range(length):
+        key += chr((ord('A') + (ord('Z') - ord('A') + 1) * i // length) % 26 + ord('A'))
+    return key
+
+def Encryption(plaintext, key):
+    ciphertext = ""
+    for i in range(len(plaintext)):
+        # XOR operation
+        cipher_char = chr((ord(plaintext[i]) - ord('A')) ^ (ord(key[i]) - ord('A')) + ord('A'))
+        ciphertext += cipher_char
+    return ciphertext
+
+def Decryption(ciphertext, key):
+    decrypted_text = ""
+    for i in range(len(ciphertext)):
+        # Reverse the XOR operation
+        plain_char = chr((ord(ciphertext[i]) - ord('A')) ^ (ord(key[i]) - ord('A')) + ord('A'))
+        decrypted_text += plain_char
+    return decrypted_text
+
+userInput = input("Enter the plaintext")
+plaintext = userInput.upper()
+key = generate_key(len(plaintext))
+print("Generated Key:", key)
+ciphertext = Encryption(plaintext, key)
+print("Ciphertext:", ciphertext)
+decrypted_text = Decryption(ciphertext, key)
+print("Decrypted text:", decrypted_text)
