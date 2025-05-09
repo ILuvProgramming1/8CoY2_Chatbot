@@ -21,10 +21,5 @@ for i in range(2):
         diddy.right(90)
         diddy.forward(GRID_SIZE)
         diddy.left(90)
-
-        angle = -angle
-
     diddy.forward(cell_size)
     diddy.right(90)
-
-screen.exitonclick()
