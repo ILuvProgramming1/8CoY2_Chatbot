@@ -37,6 +37,15 @@ while True:
         ant[1] += 1
     elif direction == 3:
         ant[0] -= 1
-    input()
+
+    if ant[0] >= width:
+        ant[0] -= width
+    elif ant[0] < 0:
+        ant[0] += width
+    if ant[1] >= height:
+        ant[1] -= height
+    elif ant[1] < 0:
+        ant[1] += height
+    #input()
 
 
